@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Delete {{ class.title }}{% endblock %}
+
+{% block content %}
+<div class="card text-center" style="height: 250px;">
+    <div class="card-header">
+        <h4 style="color: red;"> Warning! </h4>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"> Are you sure you want to delete class - "{{ course.title}}"? </h5>
+        <p class="card-text">You can no longer restore anything</p>
+        <div class='d-flex justify-content-center'> 
+            <a class='btn btn-primary p-2' href="{% url "webapp:course_detail" course.pk %}" style="width: 90px;">Cancel</a>
+            <form action='' method="post">
+            {% csrf_token %}
+            <button class="btn btn-danger p-2" style="width: 90px;">Yes</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

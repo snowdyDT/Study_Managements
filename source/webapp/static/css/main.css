@@ -1,0 +1,55 @@
+body {
+    background-color: #7BC89F !important;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    height: 140vh;
+    width: 220px;
+    z-index: 1;
+    top: 0;
+    background-color: #343a40;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    float: left;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: auto;
+    background-size: cover;
+}
+
+.content-wrapper {
+    width: 1000px;
+    margin: 10px auto;
+}
+
+.content-course {
+    padding: 20px;
+}
+
+.block-course {
+    background-color: white;
+    width: 310px;
+    height: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}

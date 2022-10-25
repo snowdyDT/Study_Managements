@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block title %} Edit Course {% endblock %}
+
+{% block content %}
+    <a href="{% url "webapp:courses_list" %}">Return to the main page..</a>
+    <hr>
+    <h1>Edit course "{{ course.title }}"</h1>
+    <div class='column-center'>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+        </form>
+    </div>
+    <hr>
+    <a href="{% url "webapp:courses_list" %}">Return to the main page..</a>
+{% endblock %}

@@ -1,0 +1,195 @@
+[
+{
+  "model": "webapp.course",
+  "pk": 10,
+  "fields": {
+    "title": "Integrated System Design",
+    "description": "ISD designs best of breed systems for warehouses, manufacturing, distribution, retail and wholesale applications and organizations which optimize space and labor utilization and provide a fast Return On Investment (ROI). From piece picking and packing systems to build lines and buffer work in process systems, Integrated Systems Design provides consulting and design services to meet organizations current and future business plans and processes. ISD design's are based on our customer's actual need and not on a technology or factory production schedule.",
+    "teacher": [
+      "admin"
+    ],
+    "start_date": "2021-10-28",
+    "group": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.course",
+  "pk": 11,
+  "fields": {
+    "title": "Economics System",
+    "description": "An economic system is a means by which societies or governments organize and distribute available resources, services, and goods across a geographic region or country. Economic systems regulate the factors of production, including land, capital, labor, and physical resources. An economic system encompasses many institutions, agencies, entities, decision-making processes, and patterns of consumption that comprise the economic structure of a given community.",
+    "teacher": [
+      "Alexey_Anpilogov"
+    ],
+    "start_date": "2021-10-01",
+    "group": [
+      4
+    ]
+  }
+},
+{
+  "model": "webapp.course",
+  "pk": 12,
+  "fields": {
+    "title": "Cisco 3",
+    "description": "Thanks to new technologies, networks are becoming more intelligent, programmable and software-driven. Networking Academy courses support this evolution and expose learners to new concepts and hands-on experiences. Best of all, courses are tied to CCNA certifications—among the most in-demand in the industry, according to IDC. Get started by choosing a course today.",
+    "teacher": [
+      "Anna_Logvinova"
+    ],
+    "start_date": "2021-11-09",
+    "group": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.course",
+  "pk": 13,
+  "fields": {
+    "title": "Software development",
+    "description": "Software development is the process of conceiving, specifying, designing, programming, documenting, testing, and bug fixing involved in creating and maintaining applications, frameworks, or other software components. ... Software can be developed for a variety of purposes.",
+    "teacher": [
+      "Alibek_Zhetpisov"
+    ],
+    "start_date": "2021-10-01",
+    "group": [
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.group",
+  "pk": 1,
+  "fields": {
+    "group_name": "SIS-1801",
+    "specialization": 1,
+    "students": [
+      [
+        "Dauren_Kapanov"
+      ],
+      [
+        "Aidana_Tursunali"
+      ]
+    ]
+  }
+},
+{
+  "model": "webapp.group",
+  "pk": 2,
+  "fields": {
+    "group_name": "SIS-1802",
+    "specialization": 1,
+    "students": [
+      [
+        "Boris_kim"
+      ],
+      [
+        "Bokeykhan_Tlegen"
+      ],
+      [
+        "Almas_Gaparov"
+      ]
+    ]
+  }
+},
+{
+  "model": "webapp.group",
+  "pk": 3,
+  "fields": {
+    "group_name": "CS-2001",
+    "specialization": 5,
+    "students": [
+      [
+        "Yernur_Anvarov"
+      ],
+      [
+        "Gaukhar_Ibragimova"
+      ]
+    ]
+  }
+},
+{
+  "model": "webapp.group",
+  "pk": 4,
+  "fields": {
+    "group_name": "MAA-2018",
+    "specialization": 3,
+    "students": [
+      [
+        "Bokeykhan_Tlegen"
+      ],
+      [
+        "Aidana_Tursunali"
+      ],
+      [
+        "Almas_Gaparov"
+      ]
+    ]
+  }
+},
+{
+  "model": "webapp.class",
+  "pk": 3,
+  "fields": {
+    "title": "Introduction",
+    "description": "ISD represents some of the best known material handling and machinery manufacturers in the world to provide turn key  integrated systems utilizing: conveyor, robots, automated storage and retrieval systems (ASRS), controls, software, pick to light, A frames, horizontal carousels, vertical lift modules (VLMs), vertical carousels, shelving, flow rack, pallet rack, fork lifts and much more.",
+    "file": "uploads/frxreport.pdf",
+    "created_at": "2021-11-04T12:09:04.220Z",
+    "updated_at": "2021-11-04T12:09:04.220Z",
+    "course": [
+      10
+    ]
+  }
+},
+{
+  "model": "webapp.specialization",
+  "pk": 1,
+  "fields": {
+    "spec_name": "System of Information Security(SIS)"
+  }
+},
+{
+  "model": "webapp.specialization",
+  "pk": 2,
+  "fields": {
+    "spec_name": "Information System(IS)"
+  }
+},
+{
+  "model": "webapp.specialization",
+  "pk": 3,
+  "fields": {
+    "spec_name": "Management and adminstration(MAA)"
+  }
+},
+{
+  "model": "webapp.specialization",
+  "pk": 4,
+  "fields": {
+    "spec_name": "Communications and communication systems(CACS))"
+  }
+},
+{
+  "model": "webapp.specialization",
+  "pk": 5,
+  "fields": {
+    "spec_name": "Computer Science(CS)"
+  }
+},
+{
+  "model": "webapp.specialization",
+  "pk": 6,
+  "fields": {
+    "spec_name": "Network and system administration(NASA)"
+  }
+},
+{
+  "model": "webapp.specialization",
+  "pk": 7,
+  "fields": {
+    "spec_name": "IT Finance"
+  }
+}
+]

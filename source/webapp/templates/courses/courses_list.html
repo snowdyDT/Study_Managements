@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} University {% endblock %}
+
+{% block content %}
+<div class='course-container row d-flex flex-wrap justify-content-start'>
+    {% for course in courses %}
+        <div class="content-course col-4" style="width: 300px;">
+            <div class="block-course shadow p-3 mb-5 bg-white rounded"> 
+                <div class="card-header d-flex">
+                    <h5 class="mr-auto p-2"> Course </h5>
+                    <a class="p-2" href="{% url 'webapp:course_edit' course.id %}"> <i class="fas fa-edit"></i> </a>
+                    <a class="p-2" href="{% url 'webapp:course_delete' course.id %}"> <i class="fas fa-trash-alt"></i> </a>
+                </div>
+                <div class="card-body" style="height: 200px;">
+                <div class='topic-name' style="height: 50px;">
+                    <a class="card-title" href="{% url 'webapp:course_detail' course.id %}"> <h5>{{course.title}}</h5> </a>
+                </div>    
+                    <p class="card-text"> <b>Teacher:</b> {{course.teacher}} </p>
+                    <p class="card-text"> <b>Groups(s):</b>
+                    {% for group in course.group.all %} {{group}} {% endfor %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<div class="d-flex pagination justify-content-center" style="margin: 100xp auto;">
+    {% if is_paginated %}
+        {% include "partial/pagination.html" %}
+    {% endif %}
+</div>
+{% endblock %}

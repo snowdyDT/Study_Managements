@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %} {{course.title}} {% endblock %}
+
+{% block content %} 
+    <a href="{% url "webapp:courses_list" %}"> << Return to the main page..</a>
+    <hr>
+    <div class='course-block-detail'>
+        <div class="card" style="width: 100%; height: 400px;">
+            <div class="card-header">
+                <h4>{{course.title}}</h4>
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                <p>
+                    {{ course.description }}
+                </p>
+                <footer class="blockquote-footer"> Pr. {{course.teacher}} </footer>
+                </blockquote>
+            </div>
+            <div style="width: 150px; height: 70px; margin: 20px;"> 
+                <a class='btn btn-primary' href="{% url "webapp:class_create" course.id %}"> Create new week </a>
+            </div>
+        </div>
+    </div>
+    {% for class in course.courses.all %}
+    <div class="card border-dark mb-3" style="max-width: 100%; height: 300px; margin: 15px auto;">
+        <div class="card-header"> 
+            <h6 style="color: #3A63A7;"> Week #{{forloop.counter}} </h6>
+        </div>
+        <div class="card-body text-dark">
+            <h5 class="card-title">Topic: {{ class.title }} </h5>
+            <p class="card-text"> Description: {{ class.description }} </p>
+            <a href="{{ class.file.url }}"> See the lecture >> </a>
+            <hr>
+            <p> <b>Created at:</b> {{ class.created_at }} - <b>by:</b> {{ course.teacher }}</p>
+        </div>
+    </div>
+    {% endfor %}
+    <hr>
+    <a href="{% url "webapp:courses_list" %}"> << Return to the main page..</a>
+{% endblock %}

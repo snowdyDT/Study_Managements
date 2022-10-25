@@ -1,0 +1,12 @@
+<div class="pagination">
+    <span class="step_links">
+        <a class="btn btn-sm btn-info" href="?page=1"> To start </a>
+        {% if page_obj.has_previous %}
+            <a class="btn btn-sm btn-light" href="?page={{ page_obj.previous_page_number }}"> <<-- </a>
+        {% endif %}
+        {% if page_obj.has_next %}
+            <a class="btn btn-sm btn-light" href="?page={{ page_obj.next_page_number }}"> -->> </a>
+        {% endif %}
+        <a class="btn btn-sm btn-info" href="?page={{ page_obj.paginator.num_pages }}"> To end </a>
+    </span>
+</div>
